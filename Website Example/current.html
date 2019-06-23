@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#show").hover(function () {
+                    alert("This video should not be judged with normal standards!");
+                },
+                        function () {
+                            alert("Seriously keep an open mind");
+                        });
+            });
+            
+            
+        </script>
+        
+        <script>
+             window.onload = function () {
+                $("#show").hide();
+            };
+            
+            function onShowVideoClick() {
+                document.getElementById("showVideo").click(
+                    $("#show").show())
+            }
+        </script>
+
+        <style>
+
+            ul{
+                position:fixed;
+                top:0;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+
+            }
+            li{
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+            .active{
+                background-color: #f4f74c
+            }
+        </style>
+        <title>Current Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="site.css">
+
+    </head>
+    <body>
+        <div>
+            <h1>About</h1>
+            <div>
+                <button type ="button"
+                        onclick="colorChanger()"> Change To Random Color</button>
+                <p> Daniel Belmeur is a student at San Francisco State University.</p>
+                <p> This is the current page just to be Clear!</p>
+                <p> This music video is amazing and should be judged fairly</p>
+                <object id="show" data="https://www.youtube.com/embed/DigtCrO77L8"
+                        width="560" height="315"></object>
+                <button id="showVideo" onclick="onShowVideoClick()">Show Video</button>
+
+
+
+            </div>
+
+
+            <ul>
+                <li><a href="index.html"> Home</a><br>
+                <li><a href="about.html"> About</a><br>
+                <li><a href="current.html"> Prototype</a>
+            </ul>
+
+            <script>
+                function colorChanger() {
+                    var letters = '0123456789ABCDEF';
+                    var color = '#';
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    document.body.style.backgroundColor = color;
+
+                }
+            </script>
+        </div>
+    </body>
+</html>
+
