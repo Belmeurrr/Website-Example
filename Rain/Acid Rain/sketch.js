@@ -3,8 +3,8 @@ var drops = [];
 
 function setup() {
   // put setup code here
-  createCanvas(600, 800);
-  for(var i = 0; i < 500; i++){
+  createCanvas(1200, 800);
+  for(var i = 0; i < 600; i++){
     drops[i] = new Raindrop();
   }
 }
