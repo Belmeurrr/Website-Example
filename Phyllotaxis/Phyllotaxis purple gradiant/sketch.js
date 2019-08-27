@@ -1,5 +1,5 @@
 var n = 0;
-var c = 2;
+var c = 4;
 
 
 
@@ -23,8 +23,8 @@ function draw() {
   var x = r * cos(a) + width / 2;
   var y = r * sin(a) + height /2;
 
-  fill(q, g, b);
-  ellipse(x, y, 8, 8);
+  fill(a % 256, 0, 255);
+  ellipse(x, y, 4, 4);
   scale(4);
 
   n++;
